@@ -29,7 +29,13 @@ return [
     */
 
     'disks' => [
-
+        'arquivos' => [
+            'driver' => 'local',
+            'root' => '/filestorages',
+            'url' => env('APP_URL').'/filestorages',
+            'visibility' => 'public',
+        ],
+        
         'local' => [
             'driver' => 'local',
             'root' => public_path('uploads'),

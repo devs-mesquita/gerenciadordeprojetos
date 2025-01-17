@@ -49,7 +49,9 @@ class UserController extends Controller
             $user->setor_id = $request->setor_id; 
     
             if ($request->hasFile('foto')) {
-                $fotoPath = $request->foto->store('foto', 'local');
+
+                $fotoPath = $request->foto->store('gerenciaprojetos' ,'arquivos');
+                // $fotoPath = $request->foto->store('foto', 'local');
                 $user->foto = $fotoPath;
             }
     
@@ -81,7 +83,8 @@ class UserController extends Controller
 
             // Handle photo upload
             if ($request->hasFile('foto')) {
-                $fotoPath = $request->file('foto')->store('foto', 'public');
+                // $fotoPath = $request->file('foto')->store('foto', 'public');
+                $fotoPath = $request->foto->store('gerenciaprojetos' ,'arquivos');
                 $user->foto = $fotoPath;
             }
 
