@@ -1,0 +1,48 @@
+ {{-- <div class="row g-2 mt-3">
+                @foreach ($tarefas_gerais as $tarefa)
+                    @php
+                        $diffDays = now()->diffInDays($tarefa->data_final, false);
+                        $cardClass = 'bg-white';
+
+                        if ($tarefa->status == 'CONCLUIDO') {
+                            $cardClass = 'bg-success text-white';
+                        } elseif ($diffDays <= 15) {
+                            $cardClass = 'bg-custom-danger text-white';
+                        } elseif ($diffDays <= 30) {
+                            $cardClass = 'bg-warning text-dark';
+                        }
+                    @endphp
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="card shadow-lg rounded-xl border-2 {{ $cardClass }}"
+                            style="width: 100%; cursor: pointer;"
+                            onclick="window.location='{{ route('tarefas_gerais.edit', $tarefa->id) }}'">
+                            <div class="card-body text-center d-flex flex-column align-items-center">
+
+                                <img src="{{ asset('uploads/' . $tarefa->user->foto) }}"
+                                    class="rounded-circle mb-3 border border-secondary" alt="Foto do líder" width="120"
+                                    height="120">
+
+                                <h5 class="card-title fw-bold mb-2 text-black">{{ $tarefa->nome_projeto }}</h5>
+                                <p class="mb-1 small text-black "><strong>Líder do Projeto:</strong>
+                                    {{ $tarefa->user->name }}</p>
+
+                                <p class="mb-0 text-black small"><strong>Status:</strong>
+                                    <span
+                                        class="badge rounded-pill">
+                                        {{ $tarefa->status }}
+                                    </span>
+                                </p>
+
+                                <p class="mb-2 text-black small"><strong>Descrição:</strong>
+                                    {{ $tarefa->descricao_projeto }}</p>
+                                <p class="mb-1 text-black small"><strong>Data de Conclusão:</strong>
+                                    <span
+                                        class="badge rounded-pill {{ $tarefa->data_final == 'Concluída' ? 'bg-success text-white' : 'bg-warning text-white' }}">
+                                        {{ date('d/m/Y', strtotime($tarefa->data_final)) }}
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach --}}
