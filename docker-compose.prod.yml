@@ -5,4 +5,11 @@ services:
     ports:
       - "3037:80"
     restart: always
-    network_mode: bridge
+    volumes:
+      - /filestorages:/filestorages      
+    networks:
+      - rede_nova
+networks:
+  rede_nova:
+    name: rede_nova
+    external: true
