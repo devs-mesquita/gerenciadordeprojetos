@@ -42,7 +42,7 @@ class UserController extends Controller
             $user = new User();
             $user->name = $request->name;
             $user->email = $request->email;
-            $user->password = Hash::make($request->password);
+            $user->password = bcrypt('pmm123456');
             $user->cpf = $request->cpf;
             $user->telefone = $request->telefone;
             $user->nivel = $request->nivel;
