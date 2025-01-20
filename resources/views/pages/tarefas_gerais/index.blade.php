@@ -130,9 +130,12 @@
                     <div class="card shadow-lg border-2 card-inteiro" style="cursor: pointer;"
                         onclick="window.location='{{ route('tarefas_gerais.edit', $tarefa->id) }}'">
                         <div class="topo-do-card {{ $classeTopo }}">
-                            <img src="{{ asset('uploads/' . $tarefa->user->foto) }}"
+                            <img src="{{ asset('filestorages/' . $tarefa->user->foto) }}"
                                 class="fixed rounded-circle mb-3 border border-secondary imagem-responsiva"
                                 alt="Foto do líder">
+                            {{-- <img src="{{ asset('uploads/' . $tarefa->user->foto) }}"
+                                class="fixed rounded-circle mb-3 border border-secondary imagem-responsiva"
+                                alt="Foto do líder"> --}}
                         </div>
 
                         <div class="body-do-card">

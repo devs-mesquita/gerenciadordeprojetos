@@ -34,8 +34,10 @@
 
                             <div class="row justify-content-center">
                                 <div class="col-md-12 text-center mb-4">
-                                    <img src="{{ asset('uploads/' . $user->foto) }}" class="rounded-circle border border-secondary imagem-responsiva"
+                                    <img src="{{ asset('filestorages/' . $user->foto) }}" class="rounded-circle border border-secondary imagem-responsiva"
                                         alt="Foto do usuário" width="200" height="200">
+                                    {{-- <img src="{{ asset('uploads/' . $user->foto) }}" class="rounded-circle border border-secondary imagem-responsiva"
+                                        alt="Foto do usuário" width="200" height="200"> --}}
                                          {{-- <img src="{{ asset('uploads/' . $user->foto) }}" class="rounded-circle" alt="Foto do usuário"> --}}
                                 </div>
 
